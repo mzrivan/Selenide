@@ -1,0 +1,1 @@
+# SelenideTests [![Build status](https://ci.appveyor.com/api/projects/status/rmf0t7q8vxgeymrf?svg=true)](https://ci.appveyor.com/project/mzrivan/seleniumtests)
