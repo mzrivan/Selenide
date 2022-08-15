@@ -36,7 +36,7 @@ class DeliveryTest {
         $("[data-test-id=city] input").setValue("Бе");
         $(byText("Белгород")).click();
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.BACK_SPACE);
-        $("[data-test-id=date] input").setValue(serviceDate.dateAfterDays(5));
+        $("[data-test-id=date] input").setValue(serviceDate.dateAfterDays(7));
         $("[data-test-id=name] input").setValue("Иванов Иван");
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[data-test-id=agreement] span").click();
@@ -47,7 +47,7 @@ class DeliveryTest {
     @Test
     void shouldDeliveryCalendarChoicePositiveTest() {
         open("http://localhost:9999");
-        int afterDay = 25;//Не более 30дней, переключение месяца или года происходит только на один шаг
+        int afterDay = 7;//Не более 30дней, переключение месяца или года происходит только на один шаг
         $("[data-test-id=city] input").setValue("Воронеж");
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         if (serviceDate.isNextYear(afterDay)) {
