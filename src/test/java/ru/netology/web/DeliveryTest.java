@@ -47,7 +47,7 @@ class DeliveryTest {
     @Test
     void shouldDeliveryCalendarChoicePositiveTest() {
         open("http://localhost:9999");
-        int afterDay = 385;
+        int afterDay = 25;//Не более 30дней, переключение месяца или года происходит только на один шаг
         $("[data-test-id=city] input").setValue("Воронеж");
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         if (serviceDate.isNextYear(afterDay)) {
